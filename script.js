@@ -1,9 +1,7 @@
 const addItem = document.querySelector(".add-item");
 const ulList = document.querySelector(".ul-list");
 
-
-
-// adds item
+//add item
 addItem.addEventListener('click', function()
 {
     //gets the user input
@@ -18,18 +16,26 @@ addItem.addEventListener('click', function()
     {
         var li = document.createElement('li');
         //lets give him an id
-        li.setAttribute('id', "liItem");
+        li.setAttribute('id', 'liItem');
         li.appendChild(document.createTextNode(getVal()));
         ulList.appendChild(li);
 
-        //lets add the incon
-        document.querySelector('.ul-list').innerHTML += ` 
-        <button class="delete"> 
-        <i class= "fa-solid fa-trash-can" onclick="deleteButton()"> </i> 
-        </button>`;
+      
+
+        var button =document.createElement('button');
+        //give him an id
+        button.setAttribute('id', 'deleteButton');
+        button.innerHTML ="Delete";
+        li.append(button);
+
+        //add a function to the button to delete child
+        button.onclick = function ()
+        {
+            ulList.removeChild(li);
+        }
     }
-    
-    //Checks if input is empty
+   
+   //Checks if input is empty
     if(!getVal())
     {
         alert("You need to put a task!")
@@ -38,45 +44,14 @@ addItem.addEventListener('click', function()
     else
     {
         createLi();   
+        const val = document.querySelector('input').value ="";
     }
-
 })
 
-function deleteButton()
-{ 
-    /*
-   let ulvar = document.getElementById('ul-id');
-   ulvar.removeChild(ulvar.lastElementChild);*/
+
+
 
 
    
-   //var listItems = document.getElementsByTagName('li');
-   var listItems =document.querySelectorAll("li");
-   for(var i = 0; i < listItems.length; i++)
-   {
-       listItems[i].onclick = function()
-       {
-           this.parentNode.removeChild(this);
-       }
-   }
-   
-   console.log('Item removed');
-}
-
-//remove  item
-//If I click on the trash icon I active the delete function
-/*
-deleteButton.addEventListener('click', function()
-{
-    ulList.onclick = function(event)
-    {
-        var target = event.target;
-        console.log(target.innerText);
-        
-        //Removes item
-        target.remove(target.selectedIndex);
-    }
-})
-*/
 
 
