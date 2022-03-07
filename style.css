@@ -19,7 +19,8 @@ h1
     text-decoration-color: brown;
     background-color: aliceblue;
     padding: 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 input
@@ -35,8 +36,31 @@ ul, li
 {
     font-size: 1.5rem;
     text-decoration: solid;
-    list-style: none;
+    
     padding: 5px;
+}
+
+li
+{
+  color:rgb(23, 63, 7);
+  font-weight: 900;
+  background-color: cadetblue;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:20px 0 20px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+button
+{
+  font-size: 1rem;
+  background-color: aqua;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-left: auto;
 }
 
 .fa-plus
@@ -72,11 +96,38 @@ ul, li
   }
 
 .box
-{ 
-    position: absolute;
-    top:20rem;
-    transform: translate(50rem, 0);
-    border: 2px solid #ff0000;
-    padding: 15px;
-    border-radius: 5px;
+{  
+  border: 10px solid #c44141;
+  padding: 5rem;
+  border-radius: 15px;
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.box-container
+{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.box-content
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+header
+{
+  display: flex;
+  align-items: center;
+}
+
+.list
+{
+ 
 }
