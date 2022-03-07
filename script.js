@@ -1,3 +1,4 @@
+
 const addItem = document.querySelector(".add-item");
 const ulList = document.querySelector(".ul-list");
 
@@ -46,10 +47,8 @@ addItem.addEventListener('click', function()
         createLi();   
         const val = document.querySelector('input').value ="";
     }
+
 })
-
-
-
 
 
    
